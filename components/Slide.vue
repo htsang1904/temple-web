@@ -1,7 +1,7 @@
 <template>
     <section class="slide">
-        <flicking ref="topFlicking" class="slide-container z-[0]" :plugins="plugins" :options="sliderOptions" key="slider">
-            <div class="flicking-panel" v-for="(slider, index) in topSilers" :key="index">
+        <flicking ref="topFlicking" class="slide-container z-[0]" :plugins="plugins" :options="sliderOptions" key="slide">
+            <div class="flicking-panel" v-for="(slider, index) in sliders" :key="index">
                 <img class="object-center object-cover h-full w-full" src="../static/intro/intro1.jpg" alt="">
             </div>
             <div slot="viewport" class="flicking-pagination"></div>
@@ -30,7 +30,7 @@ export default {
     data() {
         return {
             plugins: [
-                new AutoPlay({ duration: 4000, direction: "NEXT", stopOnHover: false }),
+                // new AutoPlay({ duration: 4000, direction: "NEXT", stopOnHover: false }),
                 new Pagination({ type: 'bullet'}),
                 
             ],
@@ -41,9 +41,9 @@ export default {
                 defaultIndex: 0,
                 inputType: ["pointer"],
                 adaptive: true,
-                duration: 1400
+                duration: 1400,
             },
-            topSilers: [
+            sliders: [
                 {src: 'intro1.jpg'},
                 {src: 'intro2.jpg'},
                 {src: 'intro3.jpg'},
@@ -63,9 +63,10 @@ export default {
 .slide {
     display: flex;
     justify-content: center;
+    width: 100%;
     .slide-container {
         max-width: 360px;
-        height: 400px;
+        height: 300px;
         border-radius: 10px;
         .flicking-pagination {
             .flicking-pagination-bullet {

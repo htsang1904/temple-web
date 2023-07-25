@@ -1,6 +1,6 @@
 <template>
     <section id="top-header-section" class="w-full lg:h-[500px]">
-        <flicking ref="topFlicking" class="top-slider z-[0]" :plugins="plugins" :options="sliderOptions" key="slider" @changed="slideChange()">
+        <flicking ref="topFlicking" class="top-slider z-[0]" :plugins="plugins" :options="sliderOptions" key="header-slide" @changed="slideChange()">
             <div class="flicking-panel" v-for="(slider, index) in topSilers" :key="index">
                 <img class="object-center object-cover h-[500px] w-full" src="../../static/slider/slider1.jpg" alt="">
                 <div class="overlay-slider tracking-wider font-[700] text-[14px] lg:text-[20px] md:text-[18px] sm:[14px] ">
@@ -8,8 +8,8 @@
                 </div>
             </div>
             <div slot="viewport" class="flicking-pagination"></div>
-            <span slot="viewport" class="arrow flicking-arrow-prev is-circle"></span>
-            <span slot="viewport" class="arrow flicking-arrow-next is-circle"></span>
+            <span slot="viewport" class="arrow hidden sm:block flicking-arrow-prev is-circle"></span>
+            <span slot="viewport" class="arrow hidden sm:block flicking-arrow-next is-circle"></span>
         </flicking>
     </section>
 </template>

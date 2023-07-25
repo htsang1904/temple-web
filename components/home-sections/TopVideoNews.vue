@@ -6,7 +6,9 @@
                 <img class="w-[80px] h-[20px]" src="../../static/background/icon-divider.png" alt="">
             </div>
             <div>
-
+                <iframe width="100%" height="315" frameborder="0" allowfullscreen
+                :src="'//www.youtube.com/embed/'+ src">
+                </iframe>
             </div>
         </div>
     </section>
@@ -19,6 +21,7 @@ export default {
     },
     data() {
         return {
+            src: 'fDCrGNDOzGY'
         };
     },
 
