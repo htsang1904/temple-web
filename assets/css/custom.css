@@ -1,0 +1,34 @@
+
+:root {
+    --animate-duration: 300ms;
+}
+html {
+    scroll-behavior: smooth;
+}
+.sweet-modal {
+    border-radius: 10px !important;
+}
+.sweet-action-close:hover {
+    @apply bg-thienquang-blue !important;
+}
+.sweet-modal .sweet-box-actions .sweet-action-close svg {
+    display: unset;
+}
+@media (max-width: 600px) {
+    .sweet-modal.is-mobile-fullscreen {
+        width: 100%;
+        border-radius: 0 !important;
+    }
+}
+.sweet-modal .sweet-title {
+    padding-left: 15px !important;
+}
+.sweet-modal .sweet-content {
+    @apply p-[15px] w-[100%] !important ;
+}
+.sweet-modal .sweet-content .sweet-content-content{
+    @apply w-[100%] box-border overflow-hidden !important ;
+}
+.sweet-modal .sweet-title > h2 {
+    font-weight: bold !important;
+}

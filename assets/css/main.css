@@ -1,0 +1,33 @@
+@import './custom.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: Montserrat;
+      src: url("/assets/fonts/montserrat/Montserrat-Bold.ttf") format('truetype');
+      font-weight: bold;
+    }
+    @font-face {
+      font-family: Montserrat;
+      src: url("/assets/fonts/montserrat/Montserrat-Regular.ttf") format('truetype');
+      font-weight: normal;
+    }
+  
+    html {
+      @apply text-gray-900;
+      letter-spacing: -0.5px;
+    }
+  }
+
+@layer components {
+    .wrapper {
+      @apply px-5 mx-auto max-w-screen-xl;
+    }
+  
+    .content-wrapper {
+      @apply px-5 mx-auto max-w-screen-md;
+    }
+  }
