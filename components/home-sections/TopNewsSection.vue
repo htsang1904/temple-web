@@ -9,7 +9,7 @@
                 <div class="slider-card rounded-[8px] w-[50px] bg-white m-[18px] overflow-hidden !flex !flex-col !justify-between shadow-lg shadow-thienquang-yellow">
                     <img class="w-full h-[60%]" src="../../static/news/new2.jpg" alt="">
                     <div class="w-full h-[40%] p-[10px]">
-                         <div class="font-[700] text-thienquang-dark-purple">
+                         <div class="description font-[700] text-thienquang-dark-purple">
                             Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương
                         </div>
                         <div class="text-thienquang-purple pt-[4px] text-[12px]">
@@ -80,6 +80,9 @@ export default {
     components: {
         Flicking: Flicking
     },
+    computed: {
+
+    },
     data() {
         return {
             plugins: [
@@ -88,8 +91,7 @@ export default {
             ],
             sliderOptions: {
                 panelsPerView: 3,
-                align: 'center',
-                circular: true,
+                bound: true,
                 defaultIndex: 1,
                 inputType: ["pointer"],
                 adaptive: true,

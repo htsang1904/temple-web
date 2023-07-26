@@ -66,7 +66,7 @@ export default {
     width: 100%;
     .slide-container {
         max-width: 360px;
-        height: 300px;
+        height: 380px;
         border-radius: 10px;
         .flicking-pagination {
             .flicking-pagination-bullet {
