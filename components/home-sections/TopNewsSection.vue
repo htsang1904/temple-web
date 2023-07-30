@@ -6,59 +6,20 @@
                 <img class="w-[80px] h-[20px]" src="../../static/background/icon-divider.png" alt="">
             </div>
             <flicking ref="newsFlicking" class="w-full !h-[420px] z-[0]" :plugins="plugins" :options="sliderOptions" key="newsSlider">
-                <div class="slider-card rounded-[8px] w-[50px] bg-white m-[18px] overflow-hidden !flex !flex-col !justify-between shadow-lg shadow-thienquang-yellow">
-                    <img class="w-full h-[60%]" src="../../static/news/new2.jpg" alt="">
-                    <div class="w-full h-[40%] p-[10px]">
-                         <div class="description font-[700] text-thienquang-dark-purple">
-                            Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương
-                        </div>
-                        <div class="text-thienquang-purple pt-[4px] text-[12px]">
-                            04/11/2018
-                        </div>
-                        <div class="description text-thienquang-dark-purple">
-                            Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.
-                        </div>
+                <div class="slider-card rounded-[8px] bg-white m-[18px] overflow-hidden !flex !flex-col !justify-between shadow-lg shadow-thienquang-yellow hover:cursor-pointer"
+                    v-for="(item, index) in news" :key="index">
+                    <div class="w-full h-[60%] overflow-hidden">
+                        <img src="../../static/news/new2.jpg" alt="">
                     </div>
-                </div>
-                <div class="slider-card rounded-[8px] w-[50px] bg-white m-[18px] overflow-hidden !flex !flex-col !justify-between shadow-lg shadow-thienquang-yellow">
-                    <img class="w-full h-[60%]" src="../../static/news/new2.jpg" alt="">
                     <div class="w-full h-[40%] p-[10px]">
-                         <div class="font-[700] text-thienquang-dark-purple">
-                            Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương
+                         <div class="description title font-[700] text-thienquang-dark-purple">
+                           {{ item.title }}
                         </div>
                         <div class="text-thienquang-purple pt-[4px] text-[12px]">
-                            04/11/2018
+                            {{ item.date }}
                         </div>
                         <div class="description text-thienquang-dark-purple">
-                            Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-card rounded-[8px] w-[50px] bg-white m-[18px] overflow-hidden !flex !flex-col !justify-between shadow-lg shadow-thienquang-yellow">
-                    <img class="w-full h-[60%]" src="../../static/news/new2.jpg" alt="">
-                    <div class="w-full h-[40%] p-[10px]">
-                         <div class="font-[700] text-thienquang-dark-purple">
-                            Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương
-                        </div>
-                        <div class="text-thienquang-purple pt-[4px] text-[12px]">
-                            04/11/2018
-                        </div>
-                        <div class="description text-thienquang-dark-purple">
-                            Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-card rounded-[8px] w-[50px] bg-white m-[18px] overflow-hidden !flex !flex-col !justify-between shadow-lg shadow-thienquang-yellow">
-                    <img class="w-full h-[60%]" src="../../static/news/new2.jpg" alt="">
-                    <div class="w-full h-[40%] p-[10px]">
-                         <div class="font-[700] text-thienquang-dark-purple">
-                            Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương
-                        </div>
-                        <div class="text-thienquang-purple pt-[4px] text-[12px]">
-                            04/11/2018
-                        </div>
-                        <div class="description text-thienquang-dark-purple">
-                            Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.
+                            {{ item.description }}
                         </div>
                     </div>
                 </div>
@@ -81,10 +42,10 @@ export default {
         Flicking: Flicking
     },
     computed: {
-
     },
     data() {
         return {
+            resize: 1,
             plugins: [
                 new Arrow(),
                 
@@ -97,16 +58,51 @@ export default {
                 adaptive: true,
                 duration: 300,
                 height: 400,
+                autoResize: false,
+                align: "center"
             },
+            news: [
+                {
+                    title: 'Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương',
+                    date: '04/11/2018',
+                    description: 'Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.'
+                },
+                {
+                    title: 'Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương',
+                    date: '04/11/2018',
+                    description: 'Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.'
+                },
+                {
+                    title: 'Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương',
+                    date: '04/11/2018',
+                    description: 'Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.'
+                },
+                {
+                    title: 'Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương',
+                    date: '04/11/2018',
+                    description: 'Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.'
+                },
+                {
+                    title: 'Chùa Thiên Quang tiếp tục hỗ trợ người dân khó khăn trong mùa dịch Covid tại Bình Dương',
+                    date: '04/11/2018',
+                    description: 'Trong tình hình dịch bệnh diễn ra nghiêm trọng, Quỹ Từ thiện Chùa Thiên Quang (Dĩ An, Bình Dương) do Ni sư Thích nữ Hương Nhũ trụ trì đã hỗ trợ trang thiết bị y tế đến các bệnh viện dã chiến, khu cách ly dành cho bệnh nhân nhiễm Covid-19.'
+                },
+
+            ]
         };
     },
 
     mounted() {
-        
+        this.handleSlider()
     },
 
     methods: {
-        
+        handleSlider() {
+            let widthPort = window.visualViewport.width
+            if(widthPort < 500) {
+                this.$refs.newsFlicking.panelsPerView = 1
+            }
+        }
     },
 };
 </script>
@@ -128,5 +124,14 @@ export default {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.slider-card:hover img {
+    transform: scale(1.2);
+    transition: all .3s linear;
+}
+.slider-card:hover .title {
+    text-decoration: underline;
+    color: #974278;
+    transition: all .3s linear;
 }
 </style>

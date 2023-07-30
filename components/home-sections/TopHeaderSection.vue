@@ -1,7 +1,7 @@
 <template>
     <section id="top-header-section" class="w-full lg:h-[500px]">
         <flicking ref="topFlicking" class="top-slider z-[0]" :plugins="plugins" :options="sliderOptions" key="header-slide" @changed="slideChange()">
-            <div class="flicking-panel" v-for="(slider, index) in topSilers" :key="index">
+            <div class="flicking-panel hover:cursor-pointer" v-for="(slider, index) in topSilers" :key="index">
                 <img class="object-center object-cover h-[500px] w-full" src="../../static/slider/slider1.jpg" alt="">
                 <div class="overlay-slider tracking-wider font-[700] text-[14px] lg:text-[20px] md:text-[18px] sm:[14px] ">
                     <div :ref="'content'+ index" class="content">"{{slider.content}}"</div>

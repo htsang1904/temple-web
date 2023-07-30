@@ -1,7 +1,7 @@
 <template>
     <section class="slide">
         <flicking ref="topFlicking" class="slide-container z-[0]" :plugins="plugins" :options="sliderOptions" key="slide">
-            <div class="flicking-panel" v-for="(slider, index) in sliders" :key="index">
+            <div class="flicking-panel hover:cursor-pointer" v-for="(slider, index) in sliders" :key="index">
                 <img class="object-center object-cover h-full w-full" src="../static/intro/intro1.jpg" alt="">
             </div>
             <div slot="viewport" class="flicking-pagination"></div>

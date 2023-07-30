@@ -9,7 +9,7 @@
                     Giới thiệu về Chùa Thiên Quang
                 </div>
                 <div class="text-justify">
-                    <strong class="text-[20px] ">Chùa Thiên Quang</strong> được Ni trưởng Huệ Giác, viện chủ Quan Âm tu viện Biên Hòa , Đông Nai khai sơn vào năm 1972. Trong quá trình 40 từ khi thành lập chùa nằm trong khu vực hồ đá. Đến năm 2011 Ni trưởng Huệ Giác hiến đất Thiên Quang cho giáo hội phật giáo Việt Nam <strong class="text-[20px]">tỉnh Bình Dương</strong> làm nơi xây dựng chùa. Nhận được sự hỗ trợ của sở Nội Vụ, các cấp chính quyền địa phương và lòng hảo tâm từ các mạnh thường quân. Đến tháng 06/2012 thì tịnh thất Thiên Quang chính thức trở thành chùa Thiên Quang. Hiện nay, người vinh dự tiếp nhận chủ trì chùa Thiên quan là <strong class="text-[20px]">sư cô Thích Nữ Hương Nhũ</strong>.
+                    <strong class="text-[20px] ">Chùa Thiên Quang</strong> được Ni trưởng Huệ Giác, viện chủ Quan Âm tu viện Biên Hòa , Đông Nai khai sơn vào năm 1972. Trong quá trình 40 từ khi thành lập chùa nằm trong khu vực hồ đá. Đến năm 2011 Ni trưởng Huệ Giác hiến đất Thiên Quang cho <strong class="text-[20px]">giáo hội phật giáo Việt Nam tỉnh Bình Dương</strong> làm nơi xây dựng chùa. Nhận được sự hỗ trợ của sở Nội Vụ, các cấp chính quyền địa phương và lòng hảo tâm từ các mạnh thường quân. Đến tháng 06/2012 thì tịnh thất Thiên Quang chính thức trở thành chùa Thiên Quang. Hiện nay, người vinh dự tiếp nhận chủ trì chùa Thiên quan là <strong class="text-[20px]">sư cô Thích Nữ Hương Nhũ</strong>.
                 </div>
             </div>
         </div>
