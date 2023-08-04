@@ -1,6 +1,6 @@
 <template>
-    <section id="top-news-section" class="w-full h-[500px] bg-thienquang-light-yellow">
-        <div class="wrapper">
+    <section id="top-news-section" class="w-full min-h-[500px] bg-thienquang-light-yellow">
+        <div class="wrapper flex flex-col justify-center items-center">
             <div class="pt-[10px] w-full text-thienquang-purple flex flex-col justify-center items-center">
                 <div class="font-[500] text-[20px]">TIN MỚI</div>
                 <img class="w-[80px] h-[20px]" src="../../static/background/icon-divider.png" alt="">
@@ -26,11 +26,13 @@
                 <span slot="viewport" class="arrow flicking-arrow-prev is-circle"></span>   
                 <span slot="viewport" class="arrow flicking-arrow-next is-circle"></span>
             </flicking>
+            <BlackWhiteButton button-name="Xem tất cả"/>
         </div>
     </section>
 </template>
 
 <script>
+import BlackWhiteButton from "../common/BlackWhiteButton.vue";
 import { Flicking } from "@egjs/vue-flicking";
 import "@egjs/vue-flicking/dist/flicking.css";
 import "@egjs/vue-flicking/dist/flicking-inline.css";
@@ -39,7 +41,8 @@ import "@egjs/flicking-plugins/dist/arrow.css";
 export default {
     name: 'TopNewsSection',
     components: {
-        Flicking: Flicking
+        Flicking: Flicking,
+        BlackWhiteButton
     },
     computed: {
     },

@@ -4,6 +4,7 @@
     <TopIntroduction/>
     <TopNewsSection/>
     <TopVideoNews/>
+    <TopNotification/>
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import TopVideoNews from '../components/home-sections/TopVideoNews.vue';
 import TopHeaderSection from '../components/home-sections/TopHeaderSection.vue';
 import TopIntroduction from '../components/home-sections/TopIntroduction.vue'
 import TopNewsSection from '../components/home-sections/TopNewsSection.vue';
+import TopNotification from '../components/home-sections/TopNotification.vue';
 export default {
   components: {
     TopHeaderSection,
     TopIntroduction,
     TopNewsSection,
-    TopVideoNews
+    TopVideoNews,
+    TopNotification,
   }
 }
 </script>
